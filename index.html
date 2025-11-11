@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>d(d＇∀＇)｜Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="home">
+  
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html"   data-page="home">Home</a>
+      <a href="about.html"   data-page="about">About</a>
+      <a href="gallery.html" data-page="gallery">Gallery</a>
+      <a href="showcase.html" data-page="showcase">Showcase</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+    
+
+    
+    <section class="card">
+      <h1>moon and water</h1>
+      <canvas id="scene" width="1000" height="500" aria-label="Dream Space Canvas"></canvas>
+    </section>
+  </main>
+
+  <script>
+    const c = document.getElementById('scene');
+    const ctx = c.getContext('2d');
+
+    const g = ctx.createLinearGradient(0, 0, 0, c.height);
+    g.addColorStop(0, '#304A5E');
+    g.addColorStop(1, '#1f2937');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, c.width, c.height);
+
+    ctx.fillStyle = '#0ea5e9';
+    ctx.fillRect(0, 450, c.width, 240);
+
+    ctx.beginPath();
+    ctx.arc(650, 100, 40, 0, Math.PI * 2);
+    ctx.fillStyle = '#fef08a'; ctx.fill();
+    
+    const houseX = 180;
+    const houseY = 360;
+    const houseWidth = 180;
+    const houseHeight = 140;
+
+    ctx.fillStyle = '#6AB4EB';
+    ctx.fillRect(houseX, houseY, houseWidth, houseHeight);
+
+    ctx.beginPath();
+    ctx.moveTo(houseX - 15, houseY);
+    ctx.lineTo(houseX + houseWidth / 2, houseY - 90);
+    ctx.lineTo(houseX + houseWidth + 20, houseY);
+    ctx.closePath();
+    ctx.fillStyle = '#3B90D1';
+    ctx.fill();
+
+
+
+
+    for (let i = 0; i < 40; i++) {
+      const x = Math.random() * c.width, y = Math.random() * 220;
+      ctx.fillStyle = 'white'; ctx.fillRect(x, y, 2, 2);
+    }
+  </script>
+</body>
+</html>

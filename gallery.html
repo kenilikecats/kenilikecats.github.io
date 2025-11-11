@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>(　OuO  )｜Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="gallery">
+  
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html"   data-page="home">Home</a>
+      <a href="about.html"   data-page="about">About</a>
+      <a href="gallery.html" data-page="gallery">Gallery</a>
+      <a href="showcase.html" data-page="showcase">Showcase</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Gallery</h2>
+
+    
+    <section class="grid-gallery">
+      <figure class="overlay-card">
+        <img src="assets/img/fakerface(2).jpg" alt="Faker smile baseline" loading="lazy" />
+        <img class="top" src="assets/img/fakerface(1).jpg" alt="" aria-hidden="true" />
+        <figcaption>Faker ready to pop off</figcaption>
+      </figure>
+    </section>
+
+    
+  <section class="card">
+    <h3>Image Map</h3>
+
+    
+    <img src="assets/img/faker 臉.jpg"
+        width="500" height="500"
+        usemap="#faces"
+        alt="團隊合照（點擊人臉可前往 About）"
+        class="map-img" />
+
+    
+    <map name="faces">
+
+      
+      <area shape="poly"
+            coords="280,80, 340,80, 370,130, 350,170, 290,170, 260,130"
+            href="about.html"
+            alt="Go to About" />
+
+    </map>
+
+    <p class="note">提示：點FAKER臉看看。</p>
+  </section>
+
+  </main>
+</body>
+</html>
